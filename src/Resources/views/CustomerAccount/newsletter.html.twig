@@ -1,0 +1,24 @@
+{% extends '@SyliusShop/Account/layout.html.twig' %}
+
+{% block title %}{{ 'sylius.ui.my_account'|trans }} | {{ parent() }}{% endblock %}
+
+{% block breadcrumb %}
+    <div class="ui breadcrumb">
+        <a href="{{ path('sylius_shop_homepage') }}" class="section">{{ 'sylius.ui.home'|trans }}</a>
+        <div class="divider"> / </div>
+        <div class="active section">{{ 'sylius.ui.my_account'|trans }}</div>
+    </div>
+{% endblock %}
+
+{% block subcontent %}
+<div class="ui stackable grid">
+    <div class="twelve wide column">
+        <div class="ui segment">
+            <h1 class="ui dividing header">
+                {{ 'app.multinewsletter.useraccount.manage'|trans }}
+            </h1>
+            {{ form(form,{'attr': {'class': 'ui loadable form', 'novalidate': 'novalidate'}})}}
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,5 @@
+# config/packages/twig.yaml
+twig:
+    # ...
+    paths:
+        '%kernel.project_dir%/vendor/vladfilimon/sylius-multi-newsletter/src/Resources/views': VladFilimonMultiNewsletterPluginBundle 

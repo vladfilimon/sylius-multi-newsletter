@@ -1,0 +1,36 @@
+admin_newsletter:
+    prefix: '/%sylius_admin.path_name%'
+    resource: |
+        alias: app.newsletter
+        section: admin
+        templates: "@SyliusAdmin/Crud"
+        except: ['show']
+        redirect: update
+        grid: app_admin_multinewsletter
+        permission: true
+        vars:
+            index:
+                icon: newspaper
+    type: sylius.resource
+    
+multinewsletter_account_dashboard:
+    path: /account/multinewsletter
+    methods: [GET, POST]
+    defaults:
+        _controller: VladFilimon\MultiNewsletterPlugin\Controller\CustomerAccountController:newsletterAction
+
+#vladfilimon_admin_ajax_shopuser_by_name_phrase:
+#    path: /admin/shop_user/search
+#    methods: [GET]
+#    defaults:
+#        _controller: sylius.controller.shop_user:indexAction
+#        _format: json
+#        _sylius:
+#            serialization_groups: [Autocomplete]
+#            permission: true
+#            repository:
+#                method: findByEmail
+#                arguments:
+#                    phrase: $phrase
+#                    locale: ~
+#                    limit: 25

@@ -1,0 +1,15 @@
+sylius_resource:
+    resources:
+        app.newsletter:
+            driver: doctrine/orm
+            classes:
+                model: VladFilimon\MultiNewsletterPlugin\Entity\Newsletter
+                repository: VladFilimon\MultiNewsletterPlugin\Repository\NewsletterRepository
+                form: VladFilimon\MultiNewsletterPlugin\Form\Type\NewsletterAdminType
+
+sylius_user:
+    resources:
+        shop:
+            user:
+                classes:
+                    model: App\Entity\User\ShopUser

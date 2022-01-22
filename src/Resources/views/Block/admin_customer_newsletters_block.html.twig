@@ -1,0 +1,16 @@
+{% block block %}
+<div class="eight wide column">
+<h3 class="sonata-feed-title">{# settings.title #}</h3>
+    <div class="ui segment">
+        <h4 class="ui dividing header"> {{ 'sylius.ui.subscribed_to_multinewsletter'|trans }}   {{ 'sylius.ui.subscribed_to_multinewsletter'|trans }}</h4>
+        <div class="ui two column stackable grid">
+            <div class="column">
+                <ul class="list-group">
+                    {% for newsletter in customer.user.newsletters %}
+                        <li class="list-group-item">{{ newsletter.name }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,28 @@
+services:
+    _defaults:
+        autowire: true
+        
+    VladFilimon\MultiNewsletterPlugin\Listener\AdminMenuListener:
+        tags:
+            - { name: kernel.event_listener, event: sylius.menu.admin.main, method: addAdminMenuItem }
+
+    app.form.extension.type.customer_profile:
+        class: VladFilimon\MultiNewsletterPlugin\Form\Extension\ShopUserRegistrationFormExtension
+        tags:
+            - { name: form.type_extension, extended_type: Sylius\Bundle\CoreBundle\Form\Type\User\ShopUserRegistrationType }
+
+
+    app_multinewsletter.account_menu:
+        class: VladFilimon\MultiNewsletterPlugin\Listener\AccountMenuListener
+        tags:
+            - { name: kernel.event_listener, event: sylius.menu.shop.account, method: addAccountMenuItems }
+
+    VladFilimon\MultiNewsletterPlugin\Controller\CustomerAccountController:
+        tags: [controller.service_arguments]
+
+    app.newsletter.form.type:
+        class: VladFilimon\MultiNewsletterPlugin\Form\Type\NewsletterAdminType
+        arguments:
+            - VladFilimon\MultiNewsletterPlugin\Entity\Newsletter
+        tags:
+            - { name: form.type }

@@ -1,0 +1,5 @@
+sylius_ui:
+    events:
+        sylius.admin.customer.show.content:
+            blocks:
+                newsletters_block: '@VladFilimonMultiNewsletterPluginBundle/Block/admin_customer_newsletters_block.html.twig'

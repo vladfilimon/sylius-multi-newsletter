@@ -1,0 +1,6 @@
+imports:
+    - { resource: "packages/sylius_resource.yaml" }
+    - { resource: "packages/sylius_grid.yaml" }
+    - { resource: "packages/sylius_mailer.yaml" }
+    - { resource: "packages/sylius_ui.yaml" }
+    - { resource: "packages/twig.yaml" }

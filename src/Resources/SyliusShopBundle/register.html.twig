@@ -1,0 +1,8 @@
+{{ form_row(form.phoneNumber) }}
+{{ form_row(form.subscribedToNewsletter) }}
+
+<!-- your fields -->
+{{ form_row(form.birthday) }}
+{{ form_row(form.secondaryPhoneNumber) }}
+
+{{ sonata_block_render_event('sylius.shop.account.profile.update.form', {'customer': customer, 'form': form}) }}
