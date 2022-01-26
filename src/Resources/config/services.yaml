@@ -26,3 +26,7 @@ services:
             - VladFilimon\MultiNewsletterPlugin\Entity\Newsletter
         tags:
             - { name: form.type }
+
+    VladFilimon\MultiNewsletterPlugin\Command\:
+        resource: '../../Command/*'
+        tags: ['console.command']

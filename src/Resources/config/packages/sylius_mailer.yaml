@@ -3,3 +3,5 @@ sylius_mailer:
         user_registration:
             subject: sylius.emails.user_registration.subject
             template: "@VladFilimonMultiNewsletterPluginBundle/Email/userRegistration.html.twig"
+        newsletter_template:
+            template: "@VladFilimonMultiNewsletterPluginBundle/Email/newsletter_template.html.twig"

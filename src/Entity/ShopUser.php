@@ -4,17 +4,15 @@ declare(strict_types=1);
 
 namespace VladFilimon\MultiNewsletterPlugin\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Sylius\Component\Core\Model\ShopUser as BaseShopUser;
 use Sylius\Component\Core\Model\ShopUserInterface;
-use VladFilimon\MultiNewsletterPlugin\Entity\Newsletter;
-use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="sylius_shop_user")
  */
-
 class ShopUser extends BaseShopUser implements ShopUserInterface
 {
     /**
@@ -30,7 +28,6 @@ class ShopUser extends BaseShopUser implements ShopUserInterface
         $this->newsletters = new ArrayCollection();
     }
 
-
     public function addNewsletter(Newsletter $newsletter)
     {
         if (!$this->newsletters->contains($newsletter)) {
@@ -43,7 +40,6 @@ class ShopUser extends BaseShopUser implements ShopUserInterface
         $this->newsletters->remove($newsletter);
     }
 
-
     /**
      * @return ArrayCollection|Newsletter[]
      */
@@ -51,6 +47,4 @@ class ShopUser extends BaseShopUser implements ShopUserInterface
     {
         return $this->newsletters;
     }
-
-
 }

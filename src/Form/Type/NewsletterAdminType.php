@@ -4,16 +4,13 @@ declare(strict_types=1);
 
 namespace VladFilimon\MultiNewsletterPlugin\Form\Type;
 
-use Sylius\Bundle\ResourceBundle\Form\DataTransformer\ResourceToIdentifierTransformer;
 use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
-use Sylius\Bundle\ResourceBundle\Form\Type\ResourceAutocompleteChoiceType;
 use Sylius\Component\User\Repository\UserRepositoryInterface;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
-use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\Form\ReversedTransformer;
 use VladFilimon\MultiNewsletterPlugin\Entity\ShopUser;
 use VladFilimon\MultiNewsletterPlugin\Repository\NewsletterRepository;
 
