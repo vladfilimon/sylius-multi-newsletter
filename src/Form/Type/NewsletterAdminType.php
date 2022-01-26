@@ -42,7 +42,7 @@ final class NewsletterAdminType extends AbstractResourceType
             ])
             ->add('shopUsers', EntityType::class, [
                 'label' => 'sylius.multinewsletter.admin.form.shopUsers',
-                'class' => 'App\\Entity\\User\\ShopUser',
+                'class' => 'VladFilimon\\MultiNewsletterPlugin\\Entity\\ShopUser',
                 'multiple' => true,
                 'expanded' => true,
                 'required' => false,

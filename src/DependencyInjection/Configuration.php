@@ -15,7 +15,7 @@ final class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder(): TreeBuilder
     {
         $treeBuilder = new TreeBuilder('multi_newsletter_plugin');
-        $rootNode = $treeBuilder->getRootNode();
+        $rootNode = $treeBuilder->getRootNode('sylius_user');
 
         return $treeBuilder;
     }

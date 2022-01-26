@@ -4,3 +4,11 @@ imports:
     - { resource: "packages/sylius_mailer.yaml" }
     - { resource: "packages/sylius_ui.yaml" }
     - { resource: "packages/twig.yaml" }
+
+sylius_user:
+    driver: doctrine/orm
+    resources:
+        shop:
+            user:
+                classes:
+                    model: VladFilimon\MultiNewsletterPlugin\Entity\ShopUser

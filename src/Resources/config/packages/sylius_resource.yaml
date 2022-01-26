@@ -12,4 +12,5 @@ sylius_user:
         shop:
             user:
                 classes:
-                    model: App\Entity\User\ShopUser
+                    model: VladFilimon\MultiNewsletterPlugin\Entity\ShopUser
+    

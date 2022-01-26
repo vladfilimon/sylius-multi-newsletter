@@ -3,7 +3,7 @@
 namespace VladFilimon\MultiNewsletterPlugin\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
-use App\Entity\User\ShopUser;
+use ShopUser;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;

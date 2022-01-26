@@ -24,4 +24,9 @@ final class VladFilimonMultiNewsletterPluginBundle extends Bundle
     {
         return new VladFilimonMultiNewsletterPluginExtension();
     }
+
+    public function getParent()
+    {
+        return 'SyliusUserBundle';
+    }
 }
