@@ -52,6 +52,9 @@ register the bundle in `config/bundles.php`
    bin/console doctrine:migrations:migrate -n
    ```
 ## Screenshots
+ These screenshots have been taken on an earlier version, they lack translations. Multinewsletter menu also moved to Marketing section.
+ 
+ 
 ![alt text](https://github.com/vladfilimon/sylius-multi-newsletter/blob/main/docs/screenshots/newsletter_admin_list.png?raw=true)
 ![alt text](https://github.com/vladfilimon/sylius-multi-newsletter/blob/main/docs/screenshots/newsletter_admin_edit.png?raw=true)
 ![alt text](https://github.com/vladfilimon/sylius-multi-newsletter/blob/main/docs/screenshots/newsletter_admin_customer_edit.png?raw=true)
