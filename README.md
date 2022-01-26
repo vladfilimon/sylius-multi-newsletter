@@ -36,7 +36,7 @@ register the bundle in `config/bundles.php`
 
    imports:
        # ...
-       - { resource: "@SyliusPayPalPlugin/Resources/config/config.yaml" }
+       - { resource: "@VladFilimonMultiNewsletterPluginBundle/Resources/config/config.yml" }
    ```
 
 3. Override Sylius' templates
@@ -69,6 +69,7 @@ To run the example sending of newsletter, create a newsletter in the admin, assi
 
 `bin/console newsletter:send NEWSLETTER_ID newsletter_template`
 ## Screenshots
+There screenshots are outdated and lack translations
 ![alt text](https://github.com/vladfilimon/sylius-multi-newsletter/blob/main/docs/screenshots/newsletter_admin_list.png?raw=true)
 ![alt text](https://github.com/vladfilimon/sylius-multi-newsletter/blob/main/docs/screenshots/newsletter_admin_edit.png?raw=true)
 ![alt text](https://github.com/vladfilimon/sylius-multi-newsletter/blob/main/docs/screenshots/newsletter_admin_customer_edit.png?raw=true)
