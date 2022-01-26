@@ -12,15 +12,15 @@ final class AdminMenuListener
     {
         $menu = $event->getMenu();
 
-        if (!$content = $menu->getChild('app-multinewsletter')) {
+        if (!$content = $menu->getChild('marketing')) {
             $content = $menu
-                ->addChild('app-multinewsletter')
-                ->setLabel('app-multinewsletter.ui.newsletters')
+                ->addChild('marketing')
+                ->setLabel('sylius.menu.admin.main.marketing.header')
             ;
         }
 
         $content->addChild('app-multinewsletter-page', ['route' => 'app_admin_newsletter_index'])
-            ->setLabel('app_multinewsletter_page.ui.newsletters')
+            ->setLabel('sylius.multinewsletter.ui.menu')
             ->setLabelAttribute('icon', 'file alternate')
         ;
     }

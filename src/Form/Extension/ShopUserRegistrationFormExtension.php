@@ -41,7 +41,7 @@ final class ShopUserRegistrationFormExtension extends AbstractTypeExtension
                 'multiple' => true,
                 'mapped' => false,
                 'choices' => $nlOptions,
-                'label' => 'app.form.customer.newsletters',
+                'label' => 'sylius.multinewsletter.register',
             ]);
         }
 

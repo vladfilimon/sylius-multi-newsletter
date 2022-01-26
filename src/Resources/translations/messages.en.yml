@@ -1,0 +1,19 @@
+sylius:
+    multinewsletter:
+        register: "Select the newsletters you want to subscribe to"
+        useraccount:
+            manage: "Manage your newsletter subscriptions"
+        email:
+            register:
+                subscriptions: "You have subscribed to the following newsletters:"
+        ui:
+            menu: "MultiNewsletters"
+        admin:
+            form:
+                name: "Newsletter name"
+                description: "Description"
+                shopUsers: "Subscribed Shop Users"
+                enabled: "Is enabled?"
+app:            
+    ui:
+        newsletters: "MultiNewsletter"

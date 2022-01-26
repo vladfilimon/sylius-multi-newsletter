@@ -31,7 +31,7 @@
 
         {% if user.newsletters | length %}
             <hr/>
-            {{ 'add.email.user_registration.multinewsletter'|trans({}, null, localeCode) }}
+            {{ 'sylius.multinewsletter.email.register.subscriptions'|trans({}, null, localeCode) }}
             <br/>
             <ul>
                 {% for newsletter in user.newsletters %}

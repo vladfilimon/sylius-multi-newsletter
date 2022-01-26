@@ -32,16 +32,16 @@ final class NewsletterAdminType extends AbstractResourceType
     {
         $builder
             ->add('name', TextType::class, [
-                'label' => 'app.newsletter.admin.form.name',
+                'label' => 'sylius.multinewsletter.admin.form.name',
             ])
             ->add('description', TextType::class, [
-                'label' => 'app.newsletter.admin.form.description',
+                'label' => 'sylius.multinewsletter.admin.form.description',
             ])
             ->add('enabled', CheckboxType::class, [
-                'label' => 'app.newsletter.admin.form.enabled',
+                'label' => 'sylius.multinewsletter.admin.form.enabled',
             ])
             ->add('shopUsers', EntityType::class, [
-                'label' => 'app.newsletter.admin.form.shopUsers',
+                'label' => 'sylius.multinewsletter.admin.form.shopUsers',
                 'class' => 'App\\Entity\\User\\ShopUser',
                 'multiple' => true,
                 'expanded' => true,
