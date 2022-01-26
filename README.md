@@ -1,6 +1,5 @@
 # sylius-multi-newsletter
-1. Install with composer
-   Add the following section to `composer.json`
+1. To install this package with composer, copy the following section to your project's `composer.json`
 ```
     "repositories": [
         {
@@ -18,7 +17,7 @@ register the bundle in `config/bundles.php`
 ];
 ```
 
-2. Import routes
+2. Import the routes
 
     ```yaml
     # config/routes.yaml
@@ -51,10 +50,25 @@ register the bundle in `config/bundles.php`
    ```
    bin/console doctrine:migrations:migrate -n
    ```
+##Sending newsletters
+Because we rely on Sylius mail sender in order to send the newsletters, each new newsletter needs a twig template, and registration for the sylius_mailer.
+This bunlde comes with a newsletter template for being subscribed, if you need other templates, register them in `sylius_mailer.yaml` like this:
+```
+sylius_mailer:
+    emails:
+      NEWSLETTER_TEMPLATE_KEY:
+      template: "path_to_my_template.html.twig"
+```
+To send a newsletter you need to run
+
+`bin/console newsletter:send NEWSLETTER_ID NEWSLETTER_TEMPLATE_KEY`
+
+This provides just minimal functionality. No batch processing, AMQP, no retrying mechanism, semaphores etc.
+
+To run the example sending of newsletter, create a newsletter in the admin, assign some shop users to it (on the admin newsletter edit page) get it's id and run
+
+`bin/console newsletter:send NEWSLETTER_ID newsletter_template`
 ## Screenshots
- These screenshots have been taken on an earlier version, they lack translations. Multinewsletter menu also moved to Marketing section.
- 
- 
 ![alt text](https://github.com/vladfilimon/sylius-multi-newsletter/blob/main/docs/screenshots/newsletter_admin_list.png?raw=true)
 ![alt text](https://github.com/vladfilimon/sylius-multi-newsletter/blob/main/docs/screenshots/newsletter_admin_edit.png?raw=true)
 ![alt text](https://github.com/vladfilimon/sylius-multi-newsletter/blob/main/docs/screenshots/newsletter_admin_customer_edit.png?raw=true)
