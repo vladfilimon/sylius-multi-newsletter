@@ -27,7 +27,6 @@ final class ShopUserRegistrationFormExtension extends AbstractTypeExtension
 
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
-        //parent::buildForm($builder, $options);
         $newsletters = $this->newsletterRepo->findBy(['enabled' => true]);
         $nlOptions = [];
 
@@ -42,6 +41,7 @@ final class ShopUserRegistrationFormExtension extends AbstractTypeExtension
                 'mapped' => false,
                 'choices' => $nlOptions,
                 'label' => 'sylius.multinewsletter.register',
+                'by_reference' => false,
             ]);
         }
 

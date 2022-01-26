@@ -39,7 +39,7 @@ class Newsletter implements ResourceInterface
     private $enabled;
 
     /**
-     * @ORM\ManyToMany(targetEntity=ShopUser::class, mappedBy="newsletters")
+     * @ORM\ManyToMany(targetEntity="VladFilimon\MultiNewsletterPlugin\Entity\ShopUser", inversedBy="newsletters", fetch="EXTRA_LAZY", cascade={"all"})
      * @ORM\JoinTable(name="newsletter_shopuser")
      */
     private $shopUsers;
@@ -101,7 +101,7 @@ class Newsletter implements ResourceInterface
     public function addShopUser(ShopUser $shopUser): self
     {
         if (!$this->shopUsers->contains($shopUser)) {
-            $this->shopUsers[] = $shopUser;
+            $this->shopUsers->add($shopUser);
         }
 
         return $this;

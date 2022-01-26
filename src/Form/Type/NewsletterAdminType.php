@@ -9,10 +9,12 @@ use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
 use Sylius\Bundle\ResourceBundle\Form\Type\ResourceAutocompleteChoiceType;
 use Sylius\Component\User\Repository\UserRepositoryInterface;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\ReversedTransformer;
+use VladFilimon\MultiNewsletterPlugin\Entity\ShopUser;
 use VladFilimon\MultiNewsletterPlugin\Repository\NewsletterRepository;
 
 final class NewsletterAdminType extends AbstractResourceType
@@ -40,12 +42,14 @@ final class NewsletterAdminType extends AbstractResourceType
             ->add('enabled', CheckboxType::class, [
                 'label' => 'sylius.multinewsletter.admin.form.enabled',
             ])
-            ->add('shopUsers', EntityType::class, [
+            ->add('shopUsers', CollectionType::class, [
                 'label' => 'sylius.multinewsletter.admin.form.shopUsers',
-                'class' => 'VladFilimon\\MultiNewsletterPlugin\\Entity\\ShopUser',
-                'multiple' => true,
-                'expanded' => true,
                 'required' => false,
+                'allow_add' => true,
+                'allow_delete' => true,
+                'by_reference' => true,
+                'entry_type' => EntityType::class,
+                'entry_options' => ['label' => false, 'class' => ShopUser::class],
             ])
         ;
     }
