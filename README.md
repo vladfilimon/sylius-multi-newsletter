@@ -76,4 +76,5 @@ There screenshots are outdated and lack translations
 ![alt text](https://github.com/vladfilimon/sylius-multi-newsletter/blob/main/docs/screenshots/newsletter_customer_account.png?raw=true)
 ![alt text](https://github.com/vladfilimon/sylius-multi-newsletter/blob/main/docs/screenshots/newsletter_email.png?raw=true)
 ![alt text](https://github.com/vladfilimon/sylius-multi-newsletter/blob/main/docs/screenshots/newsletter_register.png?raw=true)
-
+![alt text](https://github.com/vladfilimon/sylius-multi-newsletter/blob/main/docs/screenshots/newsletter_email_sent.png?raw=true)
+![alt text](https://github.com/vladfilimon/sylius-multi-newsletter/blob/main/docs/screenshots/newsletter_mailer.png?raw=true)

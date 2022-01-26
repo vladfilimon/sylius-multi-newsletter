@@ -17,3 +17,5 @@ sylius:
 app:            
     ui:
         newsletters: "MultiNewsletter"
+        edit_newsletter: "Edit newsletter"
+        new_newsletter: "New newsletter"
